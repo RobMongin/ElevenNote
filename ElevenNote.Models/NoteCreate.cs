@@ -17,5 +17,10 @@ namespace ElevenNote.Models
         [MaxLength(8000)]
         public string Content { get; set; }
 
+        public int CategoryId { get; set; }
+
+        [Display(Name = "Category Name")]
+        public string CategoryName { get; set; }
+       
     }
 }

@@ -7,15 +7,14 @@ using System.Threading.Tasks;
 
 namespace ElevenNote.Models
 {
-    public class NoteListItem
+    public class CategoryCreate
     {
-        public int NoteId { get; set; }
-        public string Title { get; set; }
-
-        [Display(Name="Created")]
-        public DateTimeOffset CreatedUtc { get; set; }
         public int CategoryId { get; set; }
+
+        [MaxLength(15, ErrorMessage = "There are too many characters in this field.")]
+        [Required]
         public string CategoryName { get; set; }
 
+        public override string ToString() => CategoryName;
     }
 }
